@@ -48,14 +48,6 @@ resource "google_cloud_run_v2_service" "default" {
         value = data.google_secret_manager_secret_version.github_token.secret_data
       }
       env {
-        name  = "OPENAI_API_KEY"
-        value = data.google_secret_manager_secret_version.openai_api.secret_data
-      }
-      env {
-        name  = "OPENAI_ORGANIZATION"
-        value = data.google_secret_manager_secret_version.openai_organization.secret_data
-      }
-      env {
         name  = "SECRET_KEY_ACCESS_API"
         value = data.google_secret_manager_secret_version.secret_key_access_api.secret_data
       }
