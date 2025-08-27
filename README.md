@@ -4,7 +4,7 @@ This repository provides a comprehensive set of **Terraform modules** for deploy
 
 ---
 
-## 📦 Repository Structure
+## 📁 Repository Structure
 
 ```plaintext
 .
@@ -20,26 +20,23 @@ This repository provides a comprehensive set of **Terraform modules** for deploy
 │   ├── cloud-run/              # Cloud Run container services module
 │   └── vertex-ai/              # Vertex AI module for ML workloads
 └── README.md                   # Root documentation (this file)
+✨ Key Features
+✅ Production-Ready – Implements GCP best practices
 
-Key Features
+✅ Modular Design – Plug-and-play modules for flexibility
 
-✅ Production-Ready: Implements GCP best practices
+✅ Cost-Optimized – Ideal for development and testing environments
 
-✅ Modular Design: Plug-and-play modules for flexibility
+✅ Security-First – Includes IAM roles, firewall rules, and secure defaults
 
-✅ Cost-Optimized: Ideal for development and testing environments
+✅ Comprehensive – Covers VPCs, serverless, containers, and AI/ML
 
-✅ Security-First: Includes IAM roles, firewall rules, and secure defaults
+✅ Well-Documented – Clear README and inline comments
 
-✅ Comprehensive Coverage: From VPCs to serverless to AI/ML
+✅ Integration-Ready – Modules work seamlessly together
 
-✅ Well-Documented: Each module includes usage instructions and examples
-
-✅ Integration-Ready: Modules work seamlessly together
-
-📁 Module Overview
-env/dev/ – Development Environment
-
+🔍 Module Overview
+📂 env/dev/ – Development Environment
 Infrastructure scaffolding for development:
 
 main.tf – Invokes and configures infrastructure modules
@@ -52,8 +49,7 @@ provider.tf – GCP provider configuration
 
 README.md – Details about the dev setup
 
-modules/vpc-network/ – VPC Network Module
-
+🌐 modules/vpc-network/ – VPC Network Module
 Sets up secure and scalable networking:
 
 Creates VPCs, subnets, NAT, routes, and firewall rules
@@ -68,13 +64,12 @@ variables.tf – Input configurations (e.g., subnets, regions)
 
 outputs.tf – Exported network details (e.g., VPC name, subnet IDs)
 
-modules/cloud-functions/ – Cloud Functions Module
-
+⚙️ modules/cloud-functions/ – Cloud Functions Module
 Deploys Gen 2 Cloud Functions with flexible triggers:
 
 Supports HTTP, Pub/Sub, Cloud Storage, and Scheduler triggers
 
-Enables custom IAM and environment settings
+Custom IAM roles and environment variables
 
 Files:
 
@@ -84,13 +79,12 @@ variables.tf – Function-level inputs
 
 outputs.tf – Function endpoint, name, and status
 
-modules/cloud-run/ – Cloud Run Module
-
-Deploys containerized apps on serverless Cloud Run:
+🐳 modules/cloud-run/ – Cloud Run Module
+Deploys containerized applications on Cloud Run:
 
 Auto-scaling, traffic splitting, and IAM integration
 
-Configurable CPU/memory settings and revision controls
+Configurable CPU, memory, and revision settings
 
 Files:
 
@@ -100,18 +94,17 @@ variables.tf – Container and service configurations
 
 outputs.tf – Service URL and metadata
 
-modules/vertex-ai/ – Vertex AI Module
-
-Builds infrastructure for AI/ML workflows on GCP:
+🤖 modules/vertex-ai/ – Vertex AI Module
+ML infrastructure for GCP Vertex AI:
 
 Deploys datasets, models, training jobs, and endpoints
 
-Includes permissions for notebooks, pipelines, and training
+Permissions for notebooks, pipelines, and service accounts
 
 Files:
 
-main.tf – Vertex AI resource deployment
+main.tf – Vertex AI resource creation
 
-variables.tf – Model/dataset/training configurations
+variables.tf – Dataset/model/training configurations
 
-outputs.tf – Model IDs, endpoints, and service accounts
+outputs.tf – Model IDs, endpoints, service accounts
