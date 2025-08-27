@@ -1,3 +1,5 @@
+# Networking-modules/main.tf - GCP VPC and Networking
+
 # Enable required APIs
 resource "google_project_service" "compute_api" {
   service            = "compute.googleapis.com"
@@ -272,4 +274,13 @@ resource "google_compute_instance_group" "main" {
 # DNS Zone (if custom domain is needed)
 resource "google_dns_managed_zone" "main" {
   count = var.create_dns_zone ? 1 : 0
-  name  = "${var.project_name
+  name  = "${var.project_name}-${var.environment}-zone"
+  dns_name = var.dns_zone_name
+  description = "DNS zone for ${var.project_name} ${var.environment}"
+  
+  visibility = "public"
+  
+  dnssec_config {
+    state = "on"
+  }
+}
