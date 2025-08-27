@@ -18,7 +18,6 @@ variable "cloud_sql_connection_name" {
   type        = string
 }
 
-
 variable "project_id" {
   description = "Project ID"
   type        = string
@@ -28,7 +27,6 @@ variable "db_instance_ip_address" {
   description = "The IP address of the Cloud SQL instance."
   type        = string
 }
-
 
 variable "repo_name" {
   description = "The name of the repository."
