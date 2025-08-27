@@ -23,17 +23,6 @@ data "google_secret_manager_secret_version" "github_token" {
 
   version = "latest"
 }
-data "google_secret_manager_secret_version" "openai_api" {
-  secret  = "OPENAI_API_KEY"
-  project = var.project_id
-  version = "latest"
-}
-
-data "google_secret_manager_secret_version" "openai_organization" {
-  secret  = "OPENAI_ORGANIZATION"
-  project = var.project_id
-  version = "latest"
-}
 
 data "google_secret_manager_secret_version" "secret_key_access_api" {
   secret  = "SECRET_KEY_ACCESS_API"
